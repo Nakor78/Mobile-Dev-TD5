@@ -22,7 +22,7 @@ public class YoutubeConnector {
     private YouTube youtube;
     private YouTube.Search.List query;
 
-    // Your developer key goes here
+    // developer key
     public static final String KEY
             = "AIzaSyB29Sl7m1da8oB8I_ftqgwHu0m1WbWhMHs";
 
@@ -38,6 +38,7 @@ public class YoutubeConnector {
             query.setKey(KEY);
             query.setType("video");
             query.setFields("items(id/videoId,snippet/title,snippet/description,snippet/thumbnails/default/url)");
+            query.setMaxResults((long) 20);
         }catch(IOException e){
             Log.d("YC", "Could not initialize: " + e);
         }

@@ -36,6 +36,8 @@ public class SearchActivity extends Activity {
 
         handler = new Handler();
 
+        addClickListener();
+
         searchInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
